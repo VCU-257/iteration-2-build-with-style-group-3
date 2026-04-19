@@ -11,35 +11,75 @@
   </head>
 
   <body>
-
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <!-- Replace with logo/icon-->
-        <a class="navbar-brand" href="./home_page.html">Home icon</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="./index.html">Home icon</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto d-flex align-items-center">
             <li class="nav-item">
-              <a class="nav-link d-block text-center border rounded" href="./find_my_representatives.html">Find My Representatives</a>
+              <a
+                class="nav-link d-block text-center border rounded"
+                href="./find_my_representatives.html"
+                >Find My Representatives</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled d-block text-center border rounded" href="#">News</a>
+              <a
+                class="nav-link disabled d-block text-center border rounded"
+                href="#"
+                >News</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled d-block text-center border rounded" href="#">Glossary & Participation</a>
+              <a
+                class="nav-link disabled d-block text-center border rounded"
+                href="#"
+                >Glossary & Participation</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled d-block text-center border rounded" href="#">Account & Notifications</a>
+              <a
+                class="nav-link disabled d-block text-center border rounded"
+                href="#"
+                >Account & Notifications</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled d-block text-center border rounded" href="#">Account Icon</a>
+              <a
+                class="nav-link disabled d-block text-center border rounded"
+                href="#"
+                >Account Icon</a
+              >
             </li>
           </ul>
         </div>
       </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a href="find_my_representatives.html">Find My Representative</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          List of Representatives
+        </li>
+      </ol>
     </nav>
 
     <div class="container-fluid bg-primary text-white min-vh-100 pt-5">
@@ -50,82 +90,99 @@
         <div class="row g-4">
           <!-- Representative Card -->
           <div class="col-12 col-md-6">
-            <div class="card bg-dark text-white p-3" style="min-height: 220px">
-              <div class="row h-100">
-                <div class="col-7">
-                  <h5 class="mb-2">Representative 1</h5>
-                  <p class="text-muted mb-2">Party (P)</p>
-                  <p class="small mb-0">Description</p>
-                </div>
-                <div class="col-5">
-                  <img
-                    src="images/Walkinshaw.jpg"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                    alt="Representative Photo"
-                  />
+            <a href="rep_page.html" class="text-decoration-none text-white">
+              <div
+                class="card bg-dark text-white p-3"
+                style="min-height: 220px"
+              >
+                <div class="row h-100">
+                  <div class="col-7">
+                    <h5 class="mb-2">Representative 1</h5>
+                    <p class="text-muted mb-2">Party (P)</p>
+                    <p class="small mb-0">Description</p>
+                  </div>
+                  <div class="col-5">
+                    <img
+                      src="images/Walkinshaw.jpg"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                      alt="Representative Photo"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-
           <!-- Representative Card -->
           <div class="col-12 col-md-6">
-            <div class="card bg-dark text-white p-3" style="min-height: 220px">
-              <div class="row h-100">
-                <div class="col-7">
-                  <h5 class="mb-2">Representative 2</h5>
-                  <p class="text-muted mb-2">Party (P)</p>
-                  <p class="small mb-0">Description</p>
-                </div>
-                <div class="col-5">
-                  <img
-                    src="images/Walkinshaw.jpg"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                    alt="Representative Photo"
-                  />
+            <a href="rep_page.html" class="text-decoration-none text-white">
+              <div
+                class="card bg-dark text-white p-3"
+                style="min-height: 220px"
+              >
+                <div class="row h-100">
+                  <div class="col-7">
+                    <h5 class="mb-2">Representative 2</h5>
+                    <p class="text-muted mb-2">Party (P)</p>
+                    <p class="small mb-0">Description</p>
+                  </div>
+                  <div class="col-5">
+                    <img
+                      src="images/Walkinshaw.jpg"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                      alt="Representative Photo"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-
           <!-- Representative Card -->
           <div class="col-12 col-md-6">
-            <div class="card bg-dark text-white p-3" style="min-height: 220px">
-              <div class="row h-100">
-                <div class="col-7">
-                  <h5 class="mb-2">Representative 3</h5>
-                  <p class="text-muted mb-2">Party (P)</p>
-                  <p class="small mb-0">Description</p>
-                </div>
-                <div class="col-5">
-                  <img
-                    src="images/Walkinshaw.jpg"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                    alt="Representative Photo"
-                  />
+            <a href="rep_page.html" class="text-decoration-none text-white">
+              <div
+                class="card bg-dark text-white p-3"
+                style="min-height: 220px"
+              >
+                <div class="row h-100">
+                  <div class="col-7">
+                    <h5 class="mb-2">Representative 3</h5>
+                    <p class="text-muted mb-2">Party (P)</p>
+                    <p class="small mb-0">Description</p>
+                  </div>
+                  <div class="col-5">
+                    <img
+                      src="images/Walkinshaw.jpg"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                      alt="Representative Photo"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-
           <!-- Representative Card -->
           <div class="col-12 col-md-6">
-            <div class="card bg-dark text-white p-3" style="min-height: 220px">
-              <div class="row h-100">
-                <div class="col-7">
-                  <h5 class="mb-2">Representative 4</h5>
-                  <p class="text-muted mb-2">Party (P)</p>
-                  <p class="small mb-0">Description</p>
-                </div>
-                <div class="col-5">
-                  <img
-                    src="images/Walkinshaw.jpg"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                    alt="Representative Photo"
-                  />
+            <a href="rep_page.html" class="text-decoration-none text-white">
+              <div
+                class="card bg-dark text-white p-3"
+                style="min-height: 220px"
+              >
+                <div class="row h-100">
+                  <div class="col-7">
+                    <h5 class="mb-2">Representative 4</h5>
+                    <p class="text-muted mb-2">Party (P)</p>
+                    <p class="small mb-0">Description</p>
+                  </div>
+                  <div class="col-5">
+                    <img
+                      src="images/Walkinshaw.jpg"
+                      style="width: 100%; height: 100%; object-fit: cover"
+                      alt="Representative Photo"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

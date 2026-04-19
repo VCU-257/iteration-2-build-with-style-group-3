@@ -12,46 +12,57 @@
 
 
 
-    <body>
- 
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <!-- Replace with logo/icon-->
-                <a class="navbar-brand" href="./home_page.html">Home icon</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto d-flex align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link d-block text-center border rounded" href="./find_my_representatives.html">Find My Representatives</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled d-block text-center border rounded" href="#">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled d-block text-center border rounded" href="#">Glossary & Participation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled d-block text-center border rounded" href="#">Account & Notifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled d-block text-center border rounded" href="#">Account Icon</a>
-                        </li>
-                    </ul>
+    <body class="vh-100 d-flex flex-column overflow-hidden">
+        <header class="flex-shrink-0">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Replace with logo/icon-->
+                    <a class="navbar-brand" href="./index.html">Home icon</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto d-flex align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link active d-block text-center border rounded" href="./find_my_representatives.html">Find My Representatives</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">Glossary & Participation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">Account & Notifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">Account Icon</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Find My Representative</li>
+                </ol>
+            </nav>
+        </header>
 
-        <div class="container-fluid">
-            <div class="row vh-100">
+        <div class="container-fluid flex-grow-1 overflow-hidden">
+            <div class="row h-100">
                 <!-- left side of split page (search bar, filters, suggested profiles) -->
                 <div class="col-lg-4 bg-primary text-white d-flex flex-column h-100 overflow-hidden align-items-start justify-content-start border-end border-4">
                     <!-- search bar -->
+                    <!-- ToDo: Add JavaScript for search function. Maybe also add a button for initiating the search (aside from adding the ability to press enter)-->
                     <div class="my-3 w-100">
-                        <label for="searchAddress" class="form-label">Address</label>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <label for="searchAddress" class="form-label mb-0">Address</label>
+                            <button type="button" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Help">?</button>
+                        </div>
                         <input type="address" class="form-control" id="searchAddress" placeholder="Enter your address">
                     </div>
                     <!-- Search by -->
@@ -67,7 +78,8 @@
                         </div>
                     </div>
                     <!-- filters -->
-                    <div class="dropdown flex-shrink-0 mb-3">
+                    <div class="d-flex flex-shrink-0 mb-3 align-items-center gap-2">
+                    <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Filter Representatives</button>
                         <div class="dropdown-menu p-3" aria-labelledby="filterDropdown" style="min-width: 200px;">
 <!-- ToDo: Add JavaScript to allow Select All to work -->
@@ -89,88 +101,111 @@
                             <button class="btn btn-sm btn-primary w-100" id="applyFiltersBtn">Apply Filters</button>
                         </div>
                     </div>
+                    <button type="button" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Help">?</button>
+                    </div>
                     <!-- Suggested Representative Profiles-->
 <!-- ToDo?: Maybe can use component for each card; need to connect to data -->
-                    <div class="flex-grow-1 w-100 mt-5" style="overflow-y: auto; min-height: 0;">
-                        <h4 class="border-bottom sticky-top bg-primary pb-2" style="z-index: 1;">Suggested Profiles</h4>
+                    <div class="flex-grow-1 w-100 mt-5 overflow-auto" style="overflow-y: auto; min-height: 0;">
+                        <div class="d-flex justify-content-between align-items-center border-bottom sticky-top bg-primary pb-2" style="z-index: 1;">
+                            <h4 class="mb-0">Suggested Profiles</h4>
+                            <button type="button" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Help">?</button>
+                        </div>
                         <div class="list-group">
-                            <div class="card bg-dark text-white mb-2 p-2">
-                                <div class="row g-0"> <!-- allows splitting of card, with 0 gutters -->
-                                    <div class="col-lg-4">
-                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Representative Name 2</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
-                                            <p class="card-text">Blurb</p>
+                            <a href="rep_page.html" class="text-decoration-none text-white">
+                                <div class="card bg-dark text-white mb-2 p-2">
+                                    <div class="row g-0"> <!-- allows splitting of card, with 0 gutters -->
+                                        <div class="col-lg-4">
+                                            <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Representative Name 1</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <p class="card-text">Blurb</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card bg-dark text-white mb-2 p-2">
-                                <div class="row g-0">
-                                    <div class="col-lg-4">
-                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Representative Name 3</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
-                                            <p class="card-text">Blurb</p>
+                            </a>
+                            <a href="rep_page.html" class="text-decoration-none text-white">
+                                <div class="card bg-dark text-white mb-2 p-2">
+                                    <div class="row g-0">
+                                        <div class="col-lg-4">
+                                            <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Representative Name 2</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <p class="card-text">Blurb</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card bg-dark text-white mb-2 p-2">
-                                <div class="row g-0">
-                                    <div class="col-lg-4">
-                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Representative Name 4</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
-                                            <p class="card-text">Blurb</p>
+                            </a>
+                            <a href="rep_page.html" class="text-decoration-none text-white">
+                                <div class="card bg-dark text-white mb-2 p-2">
+                                    <div class="row g-0">
+                                        <div class="col-lg-4">
+                                            <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Representative Name 3</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <p class="card-text">Blurb</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card bg-dark text-white mb-2 p-2">
-                                <div class="row g-0">
-                                    <div class="col-lg-4">
-                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Representative Name 5</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
-                                            <p class="card-text">Blurb</p>
+                            </a>
+                            <a href="rep_page.html" class="text-decoration-none text-white">
+                                <div class="card bg-dark text-white mb-2 p-2">
+                                    <div class="row g-0">
+                                        <div class="col-lg-4">
+                                            <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Representative Name 4</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <p class="card-text">Blurb</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card bg-dark text-white mb-2 p-2">
-                                <div class="row g-0">
-                                    <div class="col-lg-4">
-                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Representative Name 6</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
-                                            <p class="card-text">Blurb</p>
+                            </a>
+                            <a href="rep_page.html" class="text-decoration-none text-white">
+                                <div class="card bg-dark text-white mb-2 p-2">
+                                    <div class="row g-0">
+                                        <div class="col-lg-4">
+                                            <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Representative Name 5</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <p class="card-text">Blurb</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- right side of split page (map) -->
-                <div class="col-lg-8 bg-light d-flex align-items-center justify-content-center">
-                    <h1>Right side</h1>
+                <!-- NOTE: Image placeholder for interactive map--> 
+                <div class="col-lg-8 bg-light d-flex align-items-center justify-content-center p-3 h-100">
+                    <div class="card d-flex flex-column h-100 w-100">
+                        <div class="card-header d-flex flex-shrink-0 justify-content-end bg-white py-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="Help">?</button>
+                        </div>
+                        <div class="card-body d-flex flex-grow-1 overflow-hidden">
+                            <img src="images/usamap.jpg" class="img-fluid w-100" style="object-fit: contain;" alt="United States map">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

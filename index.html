@@ -1,1 +1,95 @@
+<!-- ToDo: Consider turning this and breadcrumbs into JavaScript so it can be inserted into other pages, making updating easier. -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <!-- Should only be using Bootstrap 5 for this ugly build -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    </head>
+    <body>
+        <div>
+            <header>
+                <div class="container-fluid bg-primary text-white p-3">
+                    <h1 class="mb-0">Logo</h1>
+                </div>
+                <!-- search bar -->
+                <div class="position-fixed top-0 end-0 p-3" style="z-index:1030;">
+                    <form class="d-flex bg-light p-2 rounded shadow-sm align-items-center" role="search" action="#" method="get">
+                        <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                        <button class="btn btn-sm" type="submit">icon</button>
+                    </form>
+                </div>
+            </header>
 
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Replace with logo/icon-->
+                    <a class="navbar-brand" href="./index.html">Home icon</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto d-flex align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link d-block text-center border rounded" href="./find_my_representatives.html">Find My Representatives</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">Glossary & Participation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">Account & Notifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled d-block text-center border rounded" href="#">Account Icon</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        </ol>
+
+        <!-- carousel 
+         NOTE: will need CSS to make sure banner stays at one height while matching viewport width -->
+        <div class="container-fluid my-4 px-0">
+            <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="images/carousel1.png" class="d-block w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="images/carousel2.png" class="d-block w-100 h-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="images/carousel3.png" class="d-block w-100 h-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+</div>
+        </div>
+
+        <div class="container-fluid bg-primary text-white min-vh-100 pt-5">
+            <div class="container py-3">
+                <!-- Content -->
+                <p class="lead">Welcome to the home page! This is where you can find the latest updates and information about your representatives.</p>
+                <p>Feel free to explore the site and learn more about what we have to offer.</p>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b0cw7zQ3x2m2spc4E6m3w5GQZb7lY1Y5Wz8qYFq5p3b3z6nE2V9i3K4t7J8X1Zz0" crossorigin="anonymous"></script>
+</html>
