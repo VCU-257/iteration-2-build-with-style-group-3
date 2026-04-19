@@ -3,45 +3,112 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Representative Results</title>
-     <link rel="stylesheet" type="text/css" href="scss/bootstrap.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Representatives List</title>
 
+    <link rel="stylesheet" href="scss/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #f8f5f0;
+        color: #3e3f3a;
+      }
+
+      .rep-card {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 300px;
+        border: 1px solid #d9d3ca;
+      }
+
+      .rep-title {
+        color: #325d88;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .rep-party {
+        color: #8e8c84;
+        margin: 0;
+      }
+
+      .rep-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        gap: 6px;
+      }
+
+      .rep-img-wrap {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .rep-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- navbar -->
-           <!-- navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-                <div class="container-fluid">
-                    <!-- Replace with logo/icon-->
-                    <a class="navbar-brand text-light" href="./index.html">Home icon</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto d-flex align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link d-block text-center border rounded text-light" href="./find_my_representatives.html">Find My Representatives</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled d-block text-center border rounded text-light" href="#">News</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled d-block text-center border rounded text-light" href="#">Glossary & Participation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled d-block text-center border rounded text-light" href="#">Account & Notifications</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled d-block text-center border rounded text-light" href="#">Account Icon</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+    <!-- NAVBAR (UPDATED VERSION) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="./index.html">Home icon</a>
 
-    <!-- Breadcrumbs -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex align-items-center">
+            <li class="nav-item">
+              <a
+                class="nav-link border rounded text-light"
+                href="./find_my_representatives.html"
+                >Find My Representatives</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled border rounded text-light" href="#"
+                >News</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled border rounded text-light" href="#"
+                >Glossary & Participation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled border rounded text-light" href="#"
+                >Account & Notifications</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled border rounded text-light" href="#"
+                >Account Icon</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BREADCRUMBS -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -54,103 +121,153 @@
       </ol>
     </nav>
 
-    <div class="container-fluid bg-primary text-white min-vh-100 pt-5">
-      <div class="container py-4">
-        <!-- Page Title -->
-        <h2 class="mb-4">Representatives</h2>
-        <!-- Representatives Grid -->
+    <!-- MAIN -->
+    <div class="container-fluid min-vh-100 pt-4">
+      <div class="container">
+        <h2 class="mb-4" style="color: #325d88">Representatives</h2>
+
         <div class="row g-4">
-          <!-- Representative Card -->
+          <!-- WALKINSHAW -->
           <div class="col-12 col-md-6">
-            <a href="rep_page.html" class="text-decoration-none text-white">
-              <div
-                class="card bg-dark text-white p-3"
-                style="min-height: 220px"
-              >
-                <div class="row h-100">
+            <a href="rep_page.html" class="text-decoration-none text-dark">
+              <div class="card rep-card">
+                <div class="row g-0 h-100">
                   <div class="col-7">
-                    <h5 class="mb-2">Representative 1</h5>
-                    <p class="text-muted mb-2">Party (P)</p>
-                    <p class="small mb-0">Description</p>
+                    <div class="rep-text">
+                      <h5 class="rep-title">James Walkinshaw</h5>
+                      <p class="rep-party">(D) Virginia</p>
+                      <p class="small mb-0">
+                        U.S. Representative for Virginia’s 11th district serving
+                        Northern Virginia.
+                      </p>
+                    </div>
                   </div>
+
                   <div class="col-5">
-                    <img
-                      src="images/Walkinshaw.jpg"
-                      style="width: 100%; height: 100%; object-fit: cover"
-                      alt="Representative Photo"
-                    />
+                    <div class="rep-img-wrap">
+                      <img src="images/Walkinshaw.jpg" class="rep-img" />
+                    </div>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Representative Card -->
+
+          <!-- MCCLELLAN -->
           <div class="col-12 col-md-6">
-            <a href="rep_page.html" class="text-decoration-none text-white">
-              <div
-                class="card bg-dark text-white p-3"
-                style="min-height: 220px"
-              >
-                <div class="row h-100">
+            <a href="rep_page.html" class="text-decoration-none text-dark">
+              <div class="card rep-card">
+                <div class="row g-0 h-100">
                   <div class="col-7">
-                    <h5 class="mb-2">Representative 2</h5>
-                    <p class="text-muted mb-2">Party (P)</p>
-                    <p class="small mb-0">Description</p>
+                    <div class="rep-text">
+                      <h5 class="rep-title">Jennifer McClellan</h5>
+                      <p class="rep-party">(D) Virginia</p>
+                      <p class="small mb-0">
+                        Represents Virginia’s 4th district, including Richmond
+                        and VCU.
+                      </p>
+                    </div>
                   </div>
                   <div class="col-5">
-                    <img
-                      src="images/Walkinshaw.jpg"
-                      style="width: 100%; height: 100%; object-fit: cover"
-                      alt="Representative Photo"
-                    />
+                    <div class="rep-img-wrap">
+                      <img src="images/McClellan.jpeg" class="rep-img" />
+                    </div>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Representative Card -->
+
+          <!-- SPANBERGER -->
           <div class="col-12 col-md-6">
-            <a href="rep_page.html" class="text-decoration-none text-white">
-              <div
-                class="card bg-dark text-white p-3"
-                style="min-height: 220px"
-              >
-                <div class="row h-100">
+            <a href="rep_page.html" class="text-decoration-none text-dark">
+              <div class="card rep-card">
+                <div class="row g-0 h-100">
                   <div class="col-7">
-                    <h5 class="mb-2">Representative 3</h5>
-                    <p class="text-muted mb-2">Party (P)</p>
-                    <p class="small mb-0">Description</p>
+                    <div class="rep-text">
+                      <h5 class="rep-title">Abigail Spanberger</h5>
+                      <p class="rep-party">(D) Virginia</p>
+                      <p class="small mb-0">
+                        Represents Virginia’s 7th district near Richmond.
+                      </p>
+                    </div>
                   </div>
                   <div class="col-5">
-                    <img
-                      src="images/Walkinshaw.jpg"
-                      style="width: 100%; height: 100%; object-fit: cover"
-                      alt="Representative Photo"
-                    />
+                    <div class="rep-img-wrap">
+                      <img src="images/Spanberger.jpg" class="rep-img" />
+                    </div>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- Representative Card -->
+
+          <!-- WITTMAN -->
           <div class="col-12 col-md-6">
-            <a href="rep_page.html" class="text-decoration-none text-white">
-              <div
-                class="card bg-dark text-white p-3"
-                style="min-height: 220px"
-              >
-                <div class="row h-100">
+            <a href="rep_page.html" class="text-decoration-none text-dark">
+              <div class="card rep-card">
+                <div class="row g-0 h-100">
                   <div class="col-7">
-                    <h5 class="mb-2">Representative 4</h5>
-                    <p class="text-muted mb-2">Party (P)</p>
-                    <p class="small mb-0">Description</p>
+                    <div class="rep-text">
+                      <h5 class="rep-title">Rob Wittman</h5>
+                      <p class="rep-party">(R) Virginia</p>
+                      <p class="small mb-0">
+                        Represents Virginia’s 1st district.
+                      </p>
+                    </div>
                   </div>
                   <div class="col-5">
-                    <img
-                      src="images/Walkinshaw.jpg"
-                      style="width: 100%; height: 100%; object-fit: cover"
-                      alt="Representative Photo"
-                    />
+                    <div class="rep-img-wrap">
+                      <img src="images/Wittman.jpg" class="rep-img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- BEYER -->
+          <div class="col-12 col-md-6">
+            <a href="rep_page.html" class="text-decoration-none text-dark">
+              <div class="card rep-card">
+                <div class="row g-0 h-100">
+                  <div class="col-7">
+                    <div class="rep-text">
+                      <h5 class="rep-title">Don Beyer</h5>
+                      <p class="rep-party">(D) Virginia</p>
+                      <p class="small mb-0">
+                        Represents Virginia’s 8th district.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <div class="rep-img-wrap">
+                      <img src="images/Beyer.jpeg" class="rep-img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- CLINE -->
+          <div class="col-12 col-md-6">
+            <a href="rep_page.html" class="text-decoration-none text-dark">
+              <div class="card rep-card">
+                <div class="row g-0 h-100">
+                  <div class="col-7">
+                    <div class="rep-text">
+                      <h5 class="rep-title">Ben Cline</h5>
+                      <p class="rep-party">(R) Virginia</p>
+                      <p class="small mb-0">
+                        Represents Virginia’s 6th district.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <div class="rep-img-wrap">
+                      <img src="images/Cline.jpg" class="rep-img" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -159,6 +276,7 @@
         </div>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
