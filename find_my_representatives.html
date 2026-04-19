@@ -1,0 +1,182 @@
+<!-- ToDo: Should probably adjust so it scales with screen size -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Find My Representatives</title>
+        <!-- Should only be using Bootstrap 5 for this ugly build -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+
+
+
+    <body>
+ 
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Replace with logo/icon-->
+                <a class="navbar-brand" href="./home_page.html">Home icon</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link d-block text-center border rounded" href="./find_my_representatives.html">Find My Representatives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled d-block text-center border rounded" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled d-block text-center border rounded" href="#">Glossary & Participation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled d-block text-center border rounded" href="#">Account & Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled d-block text-center border rounded" href="#">Account Icon</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container-fluid">
+            <div class="row vh-100">
+                <!-- left side of split page (search bar, filters, suggested profiles) -->
+                <div class="col-lg-4 bg-primary text-white d-flex flex-column h-100 overflow-hidden align-items-start justify-content-start border-end border-4">
+                    <!-- search bar -->
+                    <div class="my-3 w-100">
+                        <label for="searchAddress" class="form-label">Address</label>
+                        <input type="address" class="form-control" id="searchAddress" placeholder="Enter your address">
+                    </div>
+                    <!-- Search by -->
+                    <div class="d-flex flex-row flex-shrink-0 gap-4 mt-2 mb-1"> <!-- ensures flex-column doesn't force single radio button per line -->
+                        <p>Search by:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="searchBy" id="radioSearchByAddress" value="byAddress" checked>
+                            <label class="form-check-label" for="radioSearchByAddress">Address</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="searchBy" id="radioSearchByRepresentativeName" value="byRepresentativeName">
+                            <label class="form-check-label" for="radioSearchByRepresentativeName">Representative Name</label>
+                        </div>
+                    </div>
+                    <!-- filters -->
+                    <div class="dropdown flex-shrink-0 mb-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Filter Representatives</button>
+                        <div class="dropdown-menu p-3" aria-labelledby="filterDropdown" style="min-width: 200px;">
+<!-- ToDo: Add JavaScript to allow Select All to work -->
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="selectAll">
+                                <label class="form-check-label text-dark fw-bold" for="selectAll">Select All</label>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="senators" id="checkSenators">
+                                <label class="form-check-label text-dark" for="checkSenators">Senators</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" value="houseMembers" id="checkHouseMembers">
+                                <label class="form-check-label text-dark" for="checkHouseMembers">House Members</label>
+                            </div>
+                            <hr class="dropdown-divider">
+<!-- ToDo: Add JavaScript for using filtering; make sure to also close the dropdown menu after pressing it -->
+                            <button class="btn btn-sm btn-primary w-100" id="applyFiltersBtn">Apply Filters</button>
+                        </div>
+                    </div>
+                    <!-- Suggested Representative Profiles-->
+<!-- ToDo?: Maybe can use component for each card; need to connect to data -->
+                    <div class="flex-grow-1 w-100 mt-5" style="overflow-y: auto; min-height: 0;">
+                        <h4 class="border-bottom sticky-top bg-primary pb-2" style="z-index: 1;">Suggested Profiles</h4>
+                        <div class="list-group">
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0"> <!-- allows splitting of card, with 0 gutters -->
+                                    <div class="col-lg-4">
+                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 2</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-lg-4">
+                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 3</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-lg-4">
+                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 4</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-lg-4">
+                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 5</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark text-white mb-2 p-2">
+                                <div class="row g-0">
+                                    <div class="col-lg-4">
+                                        <img src="images/Walkinshaw.jpg" class="img-fluid rounded-circle" alt="Photo of Representative">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Representative Name 6</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                            <p class="card-text">Blurb</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right side of split page (map) -->
+                <div class="col-lg-8 bg-light d-flex align-items-center justify-content-center">
+                    <h1>Right side</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
