@@ -5,6 +5,7 @@ We realized there was more work than we planned, and schedules were busy, so I d
 * Search bar, Home, and Info/Help icons
 * Import Bootstrap icons
 * Navbar coloring (realizing need for navbar-light to navbar-dark)
+* Remove white bottom margins attached to breadcrumbs
 
 
 ## 2. AI / LLM Usage
