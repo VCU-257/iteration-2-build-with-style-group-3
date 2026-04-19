@@ -6,6 +6,7 @@ We realized there was more work than we planned, and schedules were busy, so I d
 * Import Bootstrap icons
 * Navbar coloring (realizing need for navbar-light to navbar-dark)
 * Remove white bottom margins attached to breadcrumbs
+* Find My Representatives typography (font and font weights)
 
 
 ## 2. AI / LLM Usage
