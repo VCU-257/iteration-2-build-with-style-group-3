@@ -10,9 +10,12 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"-->
         <link rel="stylesheet" type="text/css" href="scss/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="vh-100 d-flex flex-column overflow-hidden fw-normal" style="font-family: 'Roboto', sans-serif;">
 
             <!-- navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -57,7 +60,7 @@
             <!-- left side of split page (Image, representative info) -->
             <div
                 class="col-lg-4 bg-primary text-white d-flex flex-column h-100 overflow-auto align-items-center justify-content-start ">
-                <h1 class="fw-semibold">James Walkinshaw</h1>
+                <h1 class="fw-bold">James Walkinshaw</h1>
                 <p>(D) Virginia</p>
                 <img src="images/Walkinshaw.jpg" class="image-fluid h-50" alt="Representative James Walkinshaw">
                 <!-- repeated to demonstrate scrolling -->
@@ -73,10 +76,10 @@
             <div class="col-lg-8 bg-primary text-white d-flex flex-column h-100 overflow-hidden align-items-center justify-content-start">
 
                  <!-- will be replaced once we've implemented whatever APIs we find. -->
-                <h1>Representative News</h1>
+                <h1 class="fw-bold">Representative News</h1>
                 <p>Here is some recent news from James Walkinshaw:</p>
 
-                <h1>Recent Bills</h1>
+                <h1 class="fw-bold">Recent Bills</h1>
                 <p>Here is a list of bills sponsored in 2026:</p>
             </div>
         </div>
