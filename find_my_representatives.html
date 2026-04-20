@@ -6,19 +6,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Find My Representatives</title>
-        <!-- Should only be using Bootstrap 5 for this ugly build -->
         <link rel="stylesheet" type="text/css" href="scss/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
 
 
-    <body class="vh-100 d-flex flex-column overflow-hidden">
+    <body class="vh-100 d-flex flex-column overflow-hidden fw-normal" style="font-family: 'Roboto', sans-serif;">
         <header class="flex-shrink-0">
             <!-- navbar -->
-              <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+              <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <!-- Replace with logo/icon-->
-                    <a class="navbar-brand text-light" href="./index.html">Home icon</a>
+                    <a class="navbar-brand text-light p-0 fs-4" href="./index.html"><i class="bi bi-house"></i></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -45,7 +48,7 @@
             </nav>
 
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb mb-0 p-2">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Find My Representative</li>
                 </ol>
@@ -61,9 +64,14 @@
                     <div class="my-3 w-100">
                         <div class="d-flex justify-content-between align-items-center mb-1">
                             <label for="searchAddress" class="form-label mb-0">Address</label>
-                            <button type="button" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Help">?</button>
+                            <button type="button" id="helpSearch" class="btn btn-link text-light p-0 fs-5" aria-label="Help"><i class="bi bi-info-circle"></i></button>
                         </div>
-                        <input type="address" class="form-control" id="searchAddress" placeholder="Enter your address">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="address" class="form-control" id="searchAddress" placeholder="Enter your address">
+                        </div>
                     </div>
                     <!-- Search by -->
                     <div class="d-flex flex-row flex-shrink-0 gap-4 mt-2 mb-1"> <!-- ensures flex-column doesn't force single radio button per line -->
@@ -101,14 +109,14 @@
                             <button class="btn btn-sm btn-primary w-100" id="applyFiltersBtn">Apply Filters</button>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Help">?</button>
+                    <button type="button" id="helpFiltering" class="btn btn-link text-light p-0 fs-5" aria-label="Help"><i class="bi bi-info-circle"></i></button>
                     </div>
                     <!-- Suggested Representative Profiles-->
 <!-- ToDo?: Maybe can use component for each card; need to connect to data -->
                     <div class="flex-grow-1 w-100 mt-5 overflow-auto" style="overflow-y: auto; min-height: 0;">
                         <div class="d-flex justify-content-between align-items-center border-bottom sticky-top bg-primary pb-2" style="z-index: 1;">
-                            <h4 class="mb-0">Suggested Profiles</h4>
-                            <button type="button" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Help">?</button>
+                            <h4 class="mb-0 fw-bold" style="font-family: 'Montserrat', sans-serif;">Suggested Profiles</h4>
+                            <button type="button" id="helpRepProfiles" class="btn btn-link text-light p-0 fs-5" aria-label="Help"><i class="bi bi-info-circle"></i></button>
                         </div>
                         <div class="list-group">
                             <a href="rep_page.html" class="text-decoration-none text-white">
@@ -119,8 +127,8 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="card-body">
-                                                <h5 class="card-title">Representative Name 1</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <h5 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Representative Name 1</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted fw-semibold" style="font-family: 'Montserrat', sans-serif;">Senator</h6>
                                                 <p class="card-text">Blurb</p>
                                             </div>
                                         </div>
@@ -135,8 +143,8 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="card-body">
-                                                <h5 class="card-title">Representative Name 2</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <h5 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Representative Name 2</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted fw-semibold" style="font-family: 'Montserrat', sans-serif;">Senator</h6>
                                                 <p class="card-text">Blurb</p>
                                             </div>
                                         </div>
@@ -151,8 +159,8 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="card-body">
-                                                <h5 class="card-title">Representative Name 3</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <h5 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Representative Name 3</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted fw-semibold" style="font-family: 'Montserrat', sans-serif;">Senator</h6>
                                                 <p class="card-text">Blurb</p>
                                             </div>
                                         </div>
@@ -167,8 +175,8 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="card-body">
-                                                <h5 class="card-title">Representative Name 4</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <h5 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Representative Name 4</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted fw-semibold" style="font-family: 'Montserrat', sans-serif;">Senator</h6>
                                                 <p class="card-text">Blurb</p>
                                             </div>
                                         </div>
@@ -183,8 +191,8 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="card-body">
-                                                <h5 class="card-title">Representative Name 5</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Senator</h6>
+                                                <h5 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Representative Name 5</h5>
+                                                <h6 class="card-subtitle mb-2 fw-semibold text-muted" style="font-family: 'Montserrat', sans-serif;">Senator</h6>
                                                 <p class="card-text">Blurb</p>
                                             </div>
                                         </div>
@@ -200,7 +208,7 @@
                 <div class="col-lg-8 bg-light d-flex align-items-center justify-content-center p-3 h-100">
                     <div class="card d-flex flex-column h-100 w-100">
                         <div class="card-header d-flex flex-shrink-0 justify-content-end bg-white py-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="Help">?</button>
+                            <button type="button" id="helpMap" class="btn btn-link text-dark p-0 fs-5" aria-label="Help"><i class="bi bi-info-circle"></i></button>
                         </div>
                         <div class="card-body d-flex flex-grow-1 overflow-hidden">
                             <img src="images/usamap.jpg" class="img-fluid w-100" style="object-fit: contain;" alt="United States map">

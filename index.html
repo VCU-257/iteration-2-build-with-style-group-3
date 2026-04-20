@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home</title>
-        <!-- Should only be using Bootstrap 5 for this ugly build -->
         <link rel="stylesheet" type="text/css" href="scss/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
     <body>
         <div>
@@ -24,14 +24,13 @@
             </header>
 
             <!-- navbar -->
-             <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <!-- Replace with logo/icon-->
-                    <a class="navbar-brand text-light" href="./index.html">Home icon</a>
+                    <a class="navbar-brand text-light p-0 fs-4" href="./index.html"><i class="bi bi-house"></i></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse text-light" id="navbarNav">
                         <ul class="navbar-nav mx-auto d-flex align-items-center">
                             <li class="nav-item">
                                 <a class="nav-link d-block text-center border rounded text-light" href="./find_my_representatives.html">Find My Representatives</a>
@@ -52,10 +51,11 @@
                     </div>
                 </div>
             </nav>
-
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        </ol>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 p-2">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            </ol>
+        </nav>
 
         <!-- carousel 
          NOTE: will need CSS to make sure banner stays at one height while matching viewport width -->
