@@ -55,6 +55,47 @@
             </nav>
         </header>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const searchAddressInputElement = document.getElementById("searchAddress");
+                let typingTimer;
+                const doneTypingInterval = 800;
+
+                searchAddressInputElement.addEventListener('keyup', (event) => {
+                    clearTimeout(typingTimer);
+
+                    // pressed Enter
+                    if (event.key == 'Enter') {
+                        // input NOT empty
+                        if (searchAddressInputElement.value.trim() !== "") {
+                            searchForRepresentatives(searchAddressInputElement.value);
+                        }
+                    }
+                    // stopped typing
+                    //excluded for now
+                    /* else {
+                        typingTimer = setTimeout(() => {
+                            // input NOT empty
+                            if (searchAddressInputElement.value.trim() !== "") {
+                                searchForRepresentatives(searchAddressInputElement.value);
+                            }
+                        }, doneTypingInterval);
+                    } */
+                });
+
+                searchAddressInputElement.addEventListener('keydown', () => {
+                    clearTimeout(typingTimer);
+                });
+
+                // In the final product, this would search through the representatives.
+                // For this example product, it just sends the user to the list of
+                // representatives.
+                function searchForRepresentatives(searchParameters) {
+                    window.location.href="representatives_list.html";
+                }
+            });
+        </script>
+
         <div class="container-fluid flex-grow-1 overflow-hidden">
             <div class="row h-100">
                 <!-- left side of split page (search bar, filters, suggested profiles) -->

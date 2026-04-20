@@ -2,11 +2,12 @@
 
 ## 1. My Assigned Work
 We realized there was more work than we planned, and schedules were busy, so I did more than originally assigned. Moreover, many of the planned changes got done when we switched to the Bootswatch library (automatically colored stuff).
-* Search bar, Home, and Info/Help icons
-* Import Bootstrap icons
-* Navbar coloring (realizing need for navbar-light to navbar-dark)
-* Remove white bottom margins attached to breadcrumbs
-* Find My Representatives typography (font and font weights)
+* Search bar, Home, and Info/Help icons.
+* Import Bootstrap icons.
+* Navbar coloring (realizing need for navbar-light to navbar-dark).
+* Remove white bottom margins attached to breadcrumbs.
+* Find My Representatives typography (font and font weights).
+* Find My Representatives mock search bar JavaScript functionality (listens for "Enter").
 
 
 ## 2. AI / LLM Usage
