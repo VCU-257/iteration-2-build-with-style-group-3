@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchAddressInputElement = document.getElementById("searchAddress");
-    let typingTimer;
-    const doneTypingInterval = 800;
+    //excluded for now (part of timeout if finished typing)
+    //let typingTimer;
+    //const doneTypingInterval = 800;
 
     // listen for inputted address entered/finished
     searchAddressInputElement.addEventListener('keyup', (event) => {
-        clearTimeout(typingTimer);
+        //excluded for now (part of timeout if finished typing)
+        //clearTimeout(typingTimer);
 
         // pressed Enter
         if (event.key == 'Enter') {
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         // stopped typing
-      //excluded for now
+      //excluded for now (part of timeout if finished typing)
         /* else {
             typingTimer = setTimeout(() => {
             // input NOT empty
@@ -27,9 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // in case user starts typing again quickly
-    searchAddressInputElement.addEventListener('keydown', () => {
-        clearTimeout(typingTimer);
-    });
+    //excluded for now (part of timeout if finished typing)
+    //searchAddressInputElement.addEventListener('keydown', () => {
+    //    clearTimeout(typingTimer);
+    //});
 
     // In the final product, this would search through the representatives.
     // For this example product, it just sends the user to the list of
