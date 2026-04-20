@@ -7,7 +7,7 @@ We realized there was more work than we planned, and schedules were busy, so I d
 * Navbar coloring (realizing need for navbar-light to navbar-dark).
 * Remove white bottom margins attached to breadcrumbs.
 * Find My Representatives typography (font and font weights).
-* Find My Representatives mock search bar JavaScript functionality (listens for "Enter").
+* Mock search bar JavaScript functionality (listens for "Enter"); a final version would actually search, and would have the option for searching by either user address or by representative name. Moreover, users would be able to filter commonly-search for or nearby representative profiles (suggested profiles).
 
 
 ## 2. AI / LLM Usage
