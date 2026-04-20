@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarHTML = `
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand text-light p-0 fs-4" href="/index.html"><i class="bi bi-house"></i></a>
+        <a class="navbar-brand text-light p-0 fs-4" href="index.html"><i class="bi bi-house"></i></a>
 
         <button
           class="navbar-toggler"
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li class="nav-item">
               <a
                 class="nav-link border rounded text-light"
-                href="/find_my_representatives.html"
+                href="find_my_representatives.html"
                 >Find My Representatives</a
               >
             </li>
