@@ -1,7 +1,7 @@
 # Student Name: [Ayden Carroll]
 
 ## 1. My Assigned Work
-I worked on the Navbar functionality and script loading, the homepage, including the carousel banner, and worked with our Bootswatch styling to keep consistency in our visuals. In this updated version I also fixed a few broken pieces, such as the hamburger menu not working on the homepage and the carousel not reacting.
+I worked on the Navbar functionality and script loading, the homepage, including the carousel banner, and worked with our Bootswatch styling to keep consistency in our visuals. In this updated version I also fixed a few broken pieces, such as the hamburger menu not working on the homepage and the carousel not reacting, as well as updated our fonts.
 
 
 ## 2. AI / LLM Usage
